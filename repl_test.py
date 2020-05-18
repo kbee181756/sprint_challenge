@@ -5,6 +5,7 @@ prod.name
 
 prod.price
 
+
 prod.weight
 
 prod.flammability
