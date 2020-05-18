@@ -1,13 +1,13 @@
-from random
+from random import randomint, sample, uniform
 from acme import Product
 
 adj = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
-noun = ['Anvil', 'Catapult' 'Disguise' 'Mousetrap', '???']
+nouns = ['Anvil', 'Catapult' 'Disguise' 'Mousetrap', '???']
 
 def generate_products(n_products=30):
     products = []
     for ii in range(n_products):
-        name = adj[random.randint(0, len(adj)-1)] + ' ' + noun[random.randint(0, len(noun)-1)]
+        name = adj[random.randint(0, len(adj)-1)] + ' ' + noun[random.randint(0, len(nouns)-1)]
         price = random.randint(5, 100)
         weight = random.randint(5, 100)
         flammability = uniform(0.0, 2.5)
