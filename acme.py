@@ -12,10 +12,9 @@ class Product():
         self.identifier = identifier
 
     def stealability(self):
-        steal = self.price/self.weight
-        if steal < 0.5:
+        if (self.price/self.weight) < 0.5:
             return 'Not so stealable'
-        elif steal >= 0.5 and < 1:
+        elif (self.price/self.weight) >=0.5 and < 1:
             return 'Kinda stealable'
         else:
             return 'Very stealable'
@@ -28,3 +27,16 @@ class Product():
         else:
             return '...BABOOM'
       
+class BoxingGlove(Product):
+    def __init__(self, weight=10):
+
+    def explode(self):
+        return "it's a glove"
+
+    def punch(self):
+        if self.weight < 5:
+            return 'That tickles'
+        if self.weight >= 5 and < 15:
+            return 'Hey that hurt!'
+        else:
+            return 'OUCH'
