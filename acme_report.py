@@ -1,18 +1,36 @@
-from random import randomint, uniform
+from random
 from acme import Product
 
-adjectives = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
-nouns = ['Anvil', 'Catapult' 'Disguise' 'Mousetrap', '???']
+adj = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
+noun = ['Anvil', 'Catapult' 'Disguise' 'Mousetrap', '???']
 
-def generate_products(products=30):
+def generate_products(n_products=30):
     products = []
-    for x in range(products):
-        name = adjectives[randomint(0, len(adjectives)] + ' ' + noun[randomint(0, len(noun)-1)]
-        price = randomint(5, 100)
-        weight = randomint(5, 100)
+    for ii in range(n_products):
+        name = adj[random.randint(0, len(adj)-1)] + ' ' + noun[random.randint(0, len(noun)-1)]
+        price = random.randint(5, 100)
+        weight = random.randint(5, 100)
         flammability = uniform(0.0, 2.5)
         products.append(Product(name, price=price, weight=weight,
                                 flammability=flamability))
     return products
 
+def inventory_report(products):
+    p_names = []
+    p_prices = []
+    p_weights = []
+    p_flamm = []
+    for product in products:
+        p_name.append(product.name)
+        p_prices.append(product.price)
+        p_weights.append(product.weight)
+        p_flamm.append(product_flammability)
+    print('Acme, Inc. Inventory Report')
+    print(f'Unique Product Names: {len(set(p_names))}')
+    print(f'Average Price: {sum(p_prices/len(p_prices))}')
+    print(f'Average Weight: {sum(p_weights)/len(p_weights)}') 
+    print(f'Average Flammabilitiy: {sum(p_flamm)/len(p_flamm)}')
 
+
+if __name__ == "__main__":
+    inventory_report(generate_products())

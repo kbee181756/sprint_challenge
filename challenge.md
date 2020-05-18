@@ -41,7 +41,7 @@ Write a Python `class` to model the above data. Make sure you are *precise* in
 your field names and types, and that your class has an `__init__` constructor
 method with appropriate defaults (or lack thereof).
 
-*Hint* - `random.randint` should be able to serve your random number needs.
+*Hint* - `random.random.randint` should be able to serve your random number needs.
 
 Save the class in `acme.py`, and you can test your code in a Python repl as
 follows:
@@ -150,7 +150,7 @@ Following is useful starting code for `acme_report.py`:
 ```python
 #!/usr/bin/env python
 
-from random import randint, sample, uniform
+from random import random.randint, sample, uniform
 from acme import Product
 
 # Useful to use with random.sample to generate names
