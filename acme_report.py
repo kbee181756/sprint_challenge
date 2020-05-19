@@ -22,13 +22,13 @@ def inventory_report(products):
     p_weights = []
     p_flamm = []
     for product in products:
-        p_name.append(product.name)
+        p_names.append(product.name)
         p_prices.append(product.price)
         p_weights.append(product.weight)
-        p_flamm.append(product_flammability)
+        p_flamm.append(product.flammability)
     print('Acme, Inc. Inventory Report')
     print(f'Unique Product Names: {len(set(p_names))}')
-    print(f'Average Price: {sum(p_prices/len(p_prices))}')
+    print(f'Average Price: {sum(p_prices)/len(p_prices)}')
     print(f'Average Weight: {sum(p_weights)/len(p_weights)}') 
     print(f'Average Flammabilitiy: {sum(p_flamm)/len(p_flamm)}')
 
