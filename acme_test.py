@@ -9,15 +9,13 @@ class AcmeProdcutsTests(unittest.TestCase):
 
     
     def test_default_product_flam(self):
-        prod = Product('')
+        prod = Product('Some Other Product')
         self.assertEqual(prod.flammability, 0.5)
 
     
-    def test_exploders_stealers(self):
-        prod_test = Product('Faking Fakers Faking', price=2E3, weight=2E6, flammability=9E35)
-        self.assertEquals(prod_test.explode(), '...BABOOM!')
-        self.assertEquals(prod_test.punch(),'Hey that hurt')
-        self.assertEquals(prod_test.stealability(), 'Very stealable')
+    def test_default_product_weight(self):
+        prod = Product('Test Weight')
+        self.assertEqual(prod.weight, 20)
 
 
 class AcmeReportTests(unittest.TestCase):
