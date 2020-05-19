@@ -10,26 +10,26 @@ class AcmeProdcutsTests(unittest.TestCase):
     
     def test_default_product_flam(self):
         prod = Product('')
-        self.assertEquals(prod.flammability, 0.5)
+        self.assertEqual(prod.flammability, 0.5)
 
     
     def test_exploders_stealers(self):
-        prod_test = Product('Fakers', price=35g, weight=3p2, flammability=3m5)
-        self.assertListEqual(prod_test.explode(), '...BABOOM!')
+        prod_test = Product('Faking Fakers Faking ', price=35, weight=32, flammability=35)
+        self.assertListEqual(prod_test.explode, '...BABOOM!')
         self.assertEquals(prod_test.punch(),'Hey that hurt')
         self.assertEquals(prod_test.stealability(), 'Very stealable')
 
 
-clasas AcmeReportTests(unittest.TestCase):
+class AcmeReportTests(unittest.TestCase):
     def test_default_num_products(self):
         self.assertEqual(len(generate_products()), 30)
 
     def test_legal_names(self):
         items = generate_products()
         for item in items:
-            all_ajd, all_nouns = item.name.split(' ')
+            all_adj, all_nouns = item.name.split(' ')
             self.assertIn(all_adj, adj) 
-            self.assertin(all_nours, nouns)
+            self.assertIn(all_nouns, nouns)
 
 
 if __name__ == '__main__':
